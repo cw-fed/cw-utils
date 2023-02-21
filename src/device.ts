@@ -1,7 +1,7 @@
 export const UA = window.navigator.userAgent
 
 export const device = {
-  ios: /^iphone$/.test(UA),
+  ios: /^iphone|ipad$/.test(UA),
   andriod: /^chrome$/.test(UA),
 }
 

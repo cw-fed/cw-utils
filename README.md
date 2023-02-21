@@ -1,11 +1,9 @@
 # cw-utils
 
-- [ ] is
-- [ ] debounce
-- [ ] throttle
+- [x] is
+- [x] debounce
+- [x] throttle
 - [ ] deepClone
-- [ ] wrapFn
 - [ ] qs
 - [ ] queryParse
-- [ ] getEnv
-- [ ] 
+- [ ] detect

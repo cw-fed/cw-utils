@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "lib": ["DOM", "DOM.Iterable", "ES6"],
+    "module": "ESNext",
+    "target": "ESNext",
+    "skipLibCheck": true,
+    "noEmit": true,
+    "sourceMap": true
+  },
+  "include": ["src/*.ts"],
+  "exclude": ["node_modules", "types", "test"]
+}

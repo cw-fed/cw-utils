@@ -1,22 +1,30 @@
 {
   "name": "cw-utils",
   "version": "1.0.0",
-  "description": "",
+  "description": "前端常用工具库",
   "scripts": {
     "test": "jest",
     "build": "npm run build:typescript && npm run build:rollup",
     "build:rollup": "rollup -c rollup.config.js",
-    "build:typescript": "tsc -?"
+    "build:typescript": "tsc --build -c",
+    "prepublishOnly": "np --clean-up --any-branches --no-publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cw-fed/cw-utils.git"
   },
-  "keywords": ["cw-fed", "utils"],
+  "keywords": [
+    "cw-fed",
+    "utils"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cw-fed/cw-utils/issues"
   },
-  "homepage": "https://github.com/cw-fed/cw-utils#readme"
+  "homepage": "https://github.com/cw-fed/cw-utils#readme",
+  "devDependencies": {
+    "np": "^7.6.3",
+    "typescript": "^4.9.5"
+  }
 }
