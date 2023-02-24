@@ -1,11 +1,6 @@
-export function queryParse(url: string): Record<any, any> {
+export function queryParse(url: string): Object {
   const startIndex = url.indexOf('?')
   const n = url.length
-  const parsed = url.substring(startIndex + 1, n).split('&').map(s => s.split('=')).reduce((prev, curr) => {
-    return {
-      ...prev,
-      [curr[0]]: curr[2]
-    }
-  }, {})
+  const parsed = url.substring(startIndex + 1, n).split('&').map(s => s.split('=').reduce((a: string, b: string): any => ({[a]: b}))).reduce((a: any, b: any) => ({...a, ...b}))
   return parsed
 }
