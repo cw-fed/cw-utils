@@ -1,6 +1,6 @@
-export const throttle = (fn, delay) => {
-  let timer = null
-  return (...args) => {
+export const throttle = (fn: Function, delay: number) => {
+  let timer:NodeJS.Timer|null = null
+  return (...args: any[]) => {
     if (timer) {
       clearTimeout(timer)
     }

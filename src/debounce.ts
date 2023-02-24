@@ -1,6 +1,6 @@
-export const debounce = (fn, delay) => {
-  let timer = null
-  return (...args) => {
+export const debounce = (fn: Function, delay: number) => {
+  let timer: NodeJS.Timer|null = null
+  return (...args: any[]) => {
     if (timer) {
       clearTimeout(timer)
       timer = null
