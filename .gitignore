@@ -1,9 +1,10 @@
 .git
 node_modules/
+
+# lockfiles
 package-lock.json
 pnpm-lock.yaml
+yarn.lock
 
+# bundles
 dist
-
-# jest
-coverage

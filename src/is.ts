@@ -1,9 +1,11 @@
+import R from 'ramda'
+
 export function isString (target: any) {
-  return typeof target === 'string'
+  return R.is(String, target)
 }
 
 export function isBoolean (target: any) {
-  return typeof target === 'boolean'
+  return R.is(Boolean, target)
 }
 
 export function toStringCall (target: any) {
@@ -11,5 +13,21 @@ export function toStringCall (target: any) {
 }
 
 export function isObject (target: any) {
-  return toStringCall(target) === 'object'
+  return R.is(Object, target)
+}
+
+export function isArray (target: any) {
+  return R.is(Array, target)
+}
+
+export function isNotNil (target: any) {
+  return R.complement(R.isNil)(target)
+}
+
+export function isNil (target: any) {
+  return R.isNil(target)
+}
+
+export function isNumber (target: any) {
+  return R.is(Number, target)
 }
