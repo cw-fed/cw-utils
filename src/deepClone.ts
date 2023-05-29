@@ -1,3 +1,5 @@
-// todo: consider use deep-clone
-// export const deepClone = dp
-export const deepClone = () => {}
+import R from 'ramda'
+
+export function deepClone(target: any) {
+  return R.clone(target)
+}
